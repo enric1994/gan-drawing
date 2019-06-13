@@ -1,7 +1,7 @@
 run:
 	@docker-compose up -d --build
 dev:
-	@docker exec -it my_container bash
+	@docker exec -it gan-drawing bash
 build:
 	@docker-compose build
 down:
@@ -9,4 +9,4 @@ down:
 status:
 	@docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 logs:
-	@docker logs my_container -f
+	@docker logs gan-drawing -f

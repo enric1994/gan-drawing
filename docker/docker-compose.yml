@@ -2,17 +2,17 @@ version: '2.3'
 
 services:
 
-  my_container:
-    image: my_image
-    container_name: my_container
-    working_dir: /data
+  gan-drawing:
+    image: gan-drawing
+    container_name: gan-drawing
+    working_dir: /gan-drawing
     build:
       context: ../
       dockerfile: docker/Dockerfile
 
 # Setup environment variables:
     environment:
-      - PYTHONPATH=/data
+      - PYTHONPATH=/gan-drawing
       # Uncomment the following line to plot images on Linux
       #- DISPLAY=unix$DISPLAY
       # Set a password to your Jupyter Notebook
@@ -25,7 +25,7 @@ services:
 
 # Setup the volumes you want to share:    
     volumes:
-      - ../:/data
+      - ../:/gan-drawing
       #Share the webcam with the container
       #- /dev/video0:/dev/video0
       # Uncomment the following line to plot images on Linux
