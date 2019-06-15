@@ -1,6 +1,6 @@
 # Select a base image:
 
-FROM tensorflow/tensorflow:1.9.0-gpu
+FROM tensorflow/tensorflow:latest-gpu
 
 #Use CUDA 10 (GPU drivers >= 410.48)
 #tensorflow/tensorflow:1.13.1-gpu-py3
@@ -16,7 +16,7 @@ FROM tensorflow/tensorflow:1.9.0-gpu
 #python:2.7
 #python:3.7
 
-
+ENV DEBIAN_FRONTEND=noninteractive
 # Install OS packages (from requirements_os.txt):
 
 ADD docker/requirements_os.txt .
